@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto|Droid+Serif|Inconsolata);
 
+:root {
+	--primary-text-color: rgb(15, 38, 73);
+}
+
 body {
 	font-family: Arial, sans-serif;
 	margin: 0;
