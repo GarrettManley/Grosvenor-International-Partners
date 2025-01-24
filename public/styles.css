@@ -1,18 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto|Droid+Serif|Inconsolata);
 
 :root {
-	--primary-text-color: rgb(15, 38, 73);
-	--accent-color: #c41230;
+	--primary-text-color: #0f2649; /* Updated */
+	--accent-color: #c41230; /* Reconfirmed */
 }
 
 body {
-	font-family: Arial, sans-serif;
+	font-family: "Roboto", sans-serif; /* Updated */
 	margin: 0;
 	padding: 0;
 }
 
 header {
-	background-color: #004080; /* Example color from the logo */
+	background-color: var(--primary-text-color); /* Updated */
 	color: white;
 	padding: 1rem;
 	display: flex;
@@ -35,12 +35,8 @@ header h1 {
 }
 
 nav {
-	border-top-style: solid;
-	border-top-width: 2px;
-	border-top-color: #c41230;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	border-bottom-color: #c41230;
+	border: none; /* Removed borders */
+	background-color: #fafafa; /* Updated to offwhite */
 }
 
 nav.bg-light {
@@ -60,14 +56,14 @@ nav ul li {
 }
 
 nav ul li a {
-	color: #0c2649 !important;
+	color: var(--primary-text-color) !important; /* Updated for contrast */
 	font-size: 1.5rem;
 	letter-spacing: 0.2rem;
 	text-decoration: none;
 }
 
 nav ul li a:hover {
-	color: #c41230 !important;
+	color: var(--accent-color) !important;
 }
 
 nav ul li img {
@@ -173,7 +169,7 @@ footer {
 	color: white;
 	text-align: center;
 	padding: 1rem;
-	position: fixed;
+	position: static; /* Removed fixed positioning */
 	width: 100%;
 	bottom: 0;
 }
