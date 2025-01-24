@@ -1,0 +1,170 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto|Droid+Serif|Inconsolata);
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #004080; /* Example color from the logo */
+	color: white;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+#logo {
+	height: 50px;
+	margin-right: 1rem;
+}
+
+header h1 {
+	margin: 0;
+	font-size: 1.5rem; /* Adjust font size to prevent overlapping */
+	flex-grow: 1; /* Allow the header text to take available space */
+}
+
+nav {
+	border-top-style: solid;
+	border-top-width: 2px;
+	border-top-color: #c41230;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #c41230;
+}
+
+nav.bg-light {
+	background-color: #fdfdfd !important;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+	margin-left: auto;
+	display: flex;
+}
+
+nav ul li {
+	margin-right: 1rem;
+	padding: 1rem;
+}
+
+nav ul li a {
+	color: #0c2649 !important;
+	font-size: 1.5rem;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	color: #c41230 !important;
+}
+
+nav ul li img {
+	height: 5rem;
+}
+
+#hero {
+	background-color: #e6f2ff; /* Example color from the logo */
+	padding: 2rem;
+	text-align: center;
+}
+
+section {
+	padding: 2rem;
+	min-height: 100vh;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #c41230;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #c41230;
+}
+
+@media (max-width: 768px) {
+	h1,
+	h2 {
+		text-align: center;
+	}
+}
+
+@media (max-width: 576px) {
+	.section {
+		min-height: 0;
+	}
+}
+
+.section#exec {
+	background-color: #194e95;
+}
+
+.section#bio .partner-img {
+	min-width: 100%;
+	padding: 1rem;
+}
+
+.section#about {
+	background-color: #194e95;
+}
+
+.section#footer {
+	min-height: 0;
+}
+
+.section#footer hr {
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0.25),
+		transparent
+	);
+}
+
+.section .memo {
+	background-color: #fdfdfd;
+	padding: 2rem;
+}
+
+@media (min-width: 576px) {
+	.section .memo {
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.section .memo {
+		padding: 5rem;
+	}
+}
+
+.section a {
+	color: #0c2649;
+}
+
+.section a:hover {
+	color: #c41230;
+	text-decoration: none;
+}
+
+.section hr {
+	border: 0;
+	height: 2px;
+	background-image: linear-gradient(
+		to right,
+		transparent,
+		rgba(0, 0, 0, 0.25),
+		transparent
+	);
+}
+
+footer {
+	background-color: #004080; /* Example color from the logo */
+	color: white;
+	text-align: center;
+	padding: 1rem;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
