@@ -1,29 +1,42 @@
-<svg width="200"
+<svg width="180"
 	 height="100"
 	 viewBox="0 0 200 100"
 	 xmlns="http://www.w3.org/2000/svg">
-	<rect width="200"
+	<defs>
+		<style type="text/css">
+			@import url('https://fonts.googleapis.com/css?family=Roboto|Droid+Serif|Inconsolata');
+
+		</style>
+	</defs>
+	<rect width="180"
 		  height="100"
-		  fill="#004080" />
-	<text x="100"
+		  fill="transparent" />
+	<text x="10"
 		  y="30"
-		  font-family="Arial"
+		  font-family="Roboto"
 		  font-size="20"
-		  fill="white"
-		  text-anchor="middle"
+		  fill="rgb(15, 38, 73)"
+		  text-anchor="start"
 		  alignment-baseline="middle">grosvenor</text>
-	<text x="100"
+	<text x="10"
 		  y="50"
-		  font-family="Arial"
+		  font-family="Roboto"
 		  font-size="20"
-		  fill="white"
-		  text-anchor="middle"
+		  fill="rgb(15, 38, 73)"
+		  text-anchor="start"
 		  alignment-baseline="middle">international</text>
-	<text x="100"
+	<text x="10"
 		  y="70"
-		  font-family="Arial"
+		  font-family="Roboto"
 		  font-size="20"
-		  fill="white"
-		  text-anchor="middle"
+		  fill="rgb(15, 38, 73)"
+		  text-anchor="start"
 		  alignment-baseline="middle">partners</text>
+	<text x="90"
+		  y="72"
+		  font-family="Roboto"
+		  font-size="10"
+		  fill="rgb(15, 38, 73)"
+		  text-anchor="start"
+		  alignment-baseline="middle">Executive Search</text>
 </svg>
