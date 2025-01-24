@@ -1,89 +1,306 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/11.2.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.2.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/11.2.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+	<head>
+		<title>Grosvenor International Partners</title>
+		<!-- Required meta tags -->
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			  content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet"
+			  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+			  integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+			  crossorigin="anonymous">
+		<!-- Custom CSS -->
+		<link rel="stylesheet"
+			  href="styles.css">
+	</head>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+	<body>
+		<!-- navbar -->
+		<nav class="navbar navbar-expand-md navbar-light bg-light">
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+			<div class="container no-padding-left">
+				<a class="navbar-brand"
+				   href="#">
+					<img src="./assets/GIP_logo.svg"
+						 alt="Grosvenor International Logo">
+				</a>
+				<button class="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#nav-content"
+						aria-controls="nav-content"
+						aria-expanded="false"
+						aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+				<div class="collapse navbar-collapse d-md-flex justify-content-end"
+					 id="nav-content">
+					<ul class="navbar-nav text-center">
+						<li class="nav-item">
+							<a class="nav-link"
+							   href="#exec">Executive Search</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link"
+							   href="#bio">Partners</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link"
+							   href="#about">About Us</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Intro -->
+
+		<div class="section d-flex align-items-sm-center"
+			 id="exec">
+
+			<div class="container memo">
+
+				<div class="row">
+					<!-- Title -->
+
+					<div class="col-12">
+						<h1>Executive Search</h1>
+						<hr />
+					</div>
+					<!-- Content -->
+
+					<div class="d-flex align-items-sm-center">
+
+						<div class="col-lg-8 text-justify">
+							<p>Grosvenor International Partners is an executive search specialist with high-level
+								expertise focused on the international hospitality sector.</p>
+							<p>Your competitive advantage and competitive strength are largely shaped by selecting the
+								right leadership with the ability to make excellent decisions. More than ever the
+								consequences from selecting senior talent are all pervasive and have lasting impact. Our
+								effective executive search guarantees you the choice of the very best, first-class
+								candidates to take those far-reaching decisions.</p>
+							<p>The Partners have successfully completed Board and senior level corporate, operational
+								and functional search assignments in the global hospitality sector.</p>
+							<p>In working with us you have direct access to the principals, David Walters, Andrew Price,
+								and Jim Manley. So please contact us to discuss how we may help you.</p>
+						</div>
+
+						<div class="col-lg-4 d-none d-lg-block">
+							<img class="img-fluid"
+								 src="img/chart.jpg"
+								 alt="Chart">
+						</div>
+					</div>
+
+					<div class="col-12">
+						<hr />
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Partners -->
+
+		<div class="section d-flex align-items-sm-center"
+			 id="bio">
+
+			<div class="container memo">
+
+				<div class="row">
+					<!-- Title -->
+
+					<div class="col-12">
+						<h1>Partners</h1>
+						<hr />
+					</div>
+					<!-- Content -->
+					<!-- David -->
+
+					<div class="d-md-flex d-sm-inline align-items-sm-center">
+
+						<div class="col-md-4 text-center">
+							<img class="img-fluid rounded-circle partner-img"
+								 src="https://media.licdn.com/dms/image/v2/C5103AQFFKMMgCpKIzw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516261229187?e=1743033600&v=beta&t=H3Q1kh3POHLkBkcVYK3iDml6SrEaMA8CwgBTuAM0AvU"
+								 alt="David Walters">
+						</div>
+
+						<div class="col-md-8 text-justify">
+							<h2>David Walters</h2>
+							<p>David's extensive knowledge and understanding of the international hotel industry results
+								from the senior Human Resource positions he has held over the last 25 years. Positions
+								held include Personnel Director – International Hotels with Grand Metropolitan, HR
+								Director, Forum Hotels International and VP HR for InterContinental Hotels – Europe/
+								Middle East.</p>
+							<p>Having successfully developed his own HR Consultancy David then re-joined
+								InterContinental as Director of Resourcing. In this role he was responsible for
+								recruitment and management development on a worldwide basis for 120 Hotels in 75
+								countries. He was then appointed VP HR, Europe, Middle East and Africa and following the
+								sale of the company to Bass plc his responsibilities extended to the IC, Crowne Plaza,
+								Holiday Inn and Express brands within IHG’s European portfolio. Upon leaving IHG David
+								successfully launched and developed an international executive search business.</p>
+							<p>Email: <a href="mailto:davidw@grosvenorintl.com"
+								   target="_blank">davidw@grosvenorintl.com</a></p>
+							<p>Phone: +44 7764 413 703</p>
+						</div>
+					</div>
+
+					<div class="col-12">
+						<hr />
+					</div>
+					<!-- Andrew -->
+
+					<div class="d-md-flex d-sm-inline align-items-sm-center">
+
+						<div class="col-md-4 text-center">
+							<img class="img-fluid rounded-circle partner-img"
+								 src="https://media.licdn.com/dms/image/v2/C5603AQGEmcZkG2rhFw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1598571617238?e=1743033600&v=beta&t=Osux9SOcQc1EeujzAE7eVqGU2ukaBR08ZK09nTsmKrI"
+								 alt="Andrew Price">
+						</div>
+
+						<div class="col-md-8 text-justify">
+							<h2>Andrew Price</h2>
+							<p>Andrew’s career in the international hotel sector includes roles at Director/VP level in
+								corporate HR, spanning Australia, Asia, Europe, Middle East and North America.</p>
+							<p>Following operational to corporate HR positions with GrandMet and divisional operations
+								management, he held the roles of Regional HRD, Corporate Director of Learning &
+								Development and VP HR Asia Pacific with InterContinental Hotels. Andrew then became HRD
+								with Exclusive Hotels of the World for their successful turnaround. Subsequently he
+								developed a consultancy with clients across hotels, leisure, ICT, pharma, professional &
+								financial services, FMCG and investment banking in Australia and Asia. He is a well
+								known specialist recruiter to Australian and global blue-chip companies. He has a
+								particular interest in the challenge of 'difficult to fulfil' assignments and demanding
+								business contexts.</p>
+							<p>Email: <a href="mailto:andrewp@grosvenorintl.com">andrewp@grosvenorintl.com</a></p>
+							<p>Phone: +61 416 262 393</p>
+						</div>
+					</div>
+
+					<div class="col-12">
+						<hr />
+					</div>
+					<!-- Jim -->
+
+					<div class="d-md-flex d-sm-inline align-items-sm-center">
+
+						<div class="col-md-4 text-center">
+							<img class="img-fluid rounded-circle partner-img"
+								 src="https://media.licdn.com/dms/image/v2/C4E03AQH8NeVVkbDonw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516285598818?e=1743033600&v=beta&t=dkQl-axeThRt857CuY4vRG1lOcZroF8sZhQ_DVsTARU"
+								 alt="Jim Manley">
+						</div>
+
+						<div class="col-md-8 text-justify">
+							<h2>Jim Manley</h2>
+							<p>Jim’s senior level HR experience in the hotel industry spans over 25 years with
+								Intercontinental Hotels group. During his career Jim was directly responsible for the HR
+								function in greater then 250 owned or managed hotels crossing 7 brands and multiple
+								countries throughout the Americas. More recently, Jim created and led IHG’s Americas
+								Talent Acquisition group supporting staffing for 1,400 corporate and 15,000 hotel staff
+								in North and South America. In his roles, Jim was often involved in the internal and
+								external identification and assessment of senior management talent for the organization.
+							</p>
+							<p>Jim holds a masters degree from Cornell’s School of Hotel Management.</p>
+							<p>Email: <a href="mailto:jimm@grosvenorintl.com">jimm@grosvenorintl.com</a></p>
+							<p>Phone: +1 770 331 5794</p>
+						</div>
+					</div>
+
+					<div class="col-12">
+						<hr />
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- About -->
+
+		<div class="section d-flex align-items-sm-center"
+			 id="about">
+
+			<div class="container memo">
+
+				<div class="row">
+					<!-- title -->
+
+					<div class="col-12">
+						<h1>About Us</h1>
+						<hr />
+					</div>
+					<!-- Content -->
+
+					<div class="d-flex align-items-sm-center">
+
+						<div class="col-lg-8 text-justify">
+							<p>The needs of our clients drive Grosvenor International Partners. Our success is measured
+								against the highest levels of client satisfaction with both the process and outcome. As
+								a consequence we achieve exceptional levels of repeat business from our truly global
+								client list.</p>
+							<p>The principals provide an unrivalled wealth of industry experience, contemporary thinking
+								and knowledge of the international hotel, leisure and property development sectors. They
+								have gained an enviable reputation for successfully handling senior executive search
+								assignments for leading and highly respected companies. They understand from first-hand
+								the challenges facing operators, owners and asset managers. This expertise is
+								underpinned by unsurpassed international networks and strong research abilities designed
+								to identify talent and drive quality results.</p>
+							<p>You are promised superior search and resourcing capability together with strategic
+								thinking, a commercial focus and international expertise. This careful attention to your
+								needs and personalised service is assured by direct access to the principals.</p>
+						</div>
+
+						<div class="col-lg-4 d-none d-lg-block">
+							<img class="img-fluid"
+								 src="img/map.jpg"
+								 alt="Map">
+						</div>
+					</div>
+
+					<div class="col-12">
+						<hr />
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+
+		<div class="section d-none d-md-block"
+			 id="footer">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-4">
+						<hr />
+						<p>Berkeley Square House,<br>Berkeley Square,<br>London W1J 6BD, UK</p>
+						<p>+44 7764 413 703</p>
+					</div>
+
+					<div class="col-4">
+						<hr />
+						<p>PO Box 546,<br>Balmain,<br>Sydney 2000, Australia</p>
+						<p>+61 416 262 393</p>
+					</div>
+
+					<div class="col-4">
+						<hr />
+						<p>1170 Peachtree Street,<br>Suite 1200,<br>Atlanta, Georgia, 30309, USA</p>
+						<p>+1 770 331 5794</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+				integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+				crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+				integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+				crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+				integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+				crossorigin="anonymous"></script>
+		<script src="scripts.js"></script>
+	</body>
+
 </html>
