@@ -2,6 +2,7 @@
 
 :root {
 	--primary-text-color: rgb(15, 38, 73);
+	--accent-color: #c41230;
 }
 
 body {
