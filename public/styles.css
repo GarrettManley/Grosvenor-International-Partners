@@ -42,6 +42,12 @@ h3 {
 	font-size: 1.25rem;
 }
 
+hr {
+	background-image: linear-gradient(to right, transparent, var(--hr-color), transparent);
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
 body {
 	font-family: "Roboto", sans-serif;
 	margin: 0;
@@ -151,10 +157,6 @@ section {
 	min-height: 0;
 }
 
-.section#footer hr {
-	background-image: linear-gradient(to right, var(--hr-color), transparent);
-}
-
 .section .memo {
 	background-color: var(--nav-bg-light);
 	padding: var(--memo-padding);
@@ -186,10 +188,6 @@ section {
 .section hr {
 	border: 0;
 	height: 2px;
-	background-image: linear-gradient(to right,
-			transparent,
-			var(--hr-color),
-			transparent);
 }
 
 footer {
