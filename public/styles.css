@@ -30,6 +30,18 @@
 	--footer-position: static;
 }
 
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
 body {
 	font-family: "Roboto", sans-serif;
 	margin: 0;
@@ -109,6 +121,7 @@ section {
 }
 
 @media (max-width: 768px) {
+
 	h1,
 	h2 {
 		text-align: center;
@@ -173,7 +186,10 @@ section {
 .section hr {
 	border: 0;
 	height: 2px;
-	background-image: linear-gradient(to right, transparent, var(--hr-color), transparent);
+	background-image: linear-gradient(to right,
+			transparent,
+			var(--hr-color),
+			transparent);
 }
 
 footer {
