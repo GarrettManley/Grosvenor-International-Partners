@@ -1,4 +1,4 @@
-<svg width="16rem" height="5rem" viewBox="0 0 16rem 5rem" xmlns="http://www.w3.org/2000/svg">
+<svg width="14rem" height="5.5rem" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <style type="text/css">
             :root {
@@ -12,12 +12,6 @@
                 --font-size-small: 0.8rem;
 
                 --text-position-x-title: 0.5rem;
-                --text-position-x-sub-title: 8.2rem;
-
-                --text-position-y-title-g: 1.0rem;
-                --text-position-y-title-i: 2.5rem;
-                --text-position-y-title-p: 4.0rem;
-                --text-position-y-sub-title: 4.0rem;
             }
 
             /* Define the fonts directly */
@@ -53,9 +47,8 @@
             }
         </style>
     </defs>
-    <rect width="16rem" height="5rem" fill="transparent" />
-    <text x="var(--text-position-x-title)" y="var(--text-position-y-title-g)" class="text-title roboto">grosvenor</text>
-    <text x="var(--text-position-x-title)" y="3rem" class="text-title-secondary roboto">international</text>
+    <text x="var(--text-position-x-title)" y="1rem" class="text-title roboto">grosvenor</text>
+    <text x="var(--text-position-x-title)" y="2.7rem" class="text-title-secondary roboto">international</text>
     <text x="var(--text-position-x-title)" y="4.1rem" class="text-title roboto">partners</text>
-    <text x="8.2rem" y="4.5rem" class="text-sub-title roboto">Executive Search</text>
+    <text x="7.7rem" y="4.4rem" class="text-sub-title roboto">Executive Search</text>
 </svg>
