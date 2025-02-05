@@ -8,7 +8,6 @@
 	--primary-text-color: mix(var(--secondary-text-color), var(--accent-color), 50%);
 	--background-color: #fafafa;
 	--nav-bg-light: #fdfdfd;
-	--hero-bg-color: #e6f2ff;
 	--section-bg-color: #194e95;
 	--footer-bg-color: #004080;
 	--link-color: #0c2649;
@@ -22,7 +21,6 @@
 	--nav-item-padding: 1rem;
 	--nav-item-font-size: 1.5rem;
 	--nav-item-letter-spacing: 0.2rem;
-	--hero-padding: 2rem;
 	--section-padding: 2rem;
 	--section-min-height: 100vh;
 	--memo-padding: 2rem;
@@ -119,13 +117,6 @@ nav ul li img {
 	height: 5rem;
 }
 
-/* Hero Section */
-#hero {
-	background-color: var(--hero-bg-color);
-	padding: var(--hero-padding);
-	text-align: center;
-}
-
 /* Sections */
 section {
 	padding: var(--section-padding);
@@ -138,13 +129,13 @@ section {
 	background-color: var(--section-bg-color);
 }
 
+.section#bio {
+	background-color: var(--section-bg-color);
+}
+
 .section#bio .partner-img {
 	min-width: 100%;
 	padding: 1rem;
-}
-
-.section#about {
-	background-color: var(--section-bg-color);
 }
 
 .section#footer {
