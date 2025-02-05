@@ -170,6 +170,13 @@ section {
 	height: 2px;
 }
 
+a strong {
+	color: var(--link-color);
+}
+a strong:hover {
+	color: var(--link-hover-color);
+}
+
 /* Footer */
 footer {
 	background-color: var(--footer-bg-color);
