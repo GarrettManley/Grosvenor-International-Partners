@@ -1,51 +1,61 @@
-<svg width="180"
-	 height="100"
-	 viewBox="0 0 200 100"
-	 xmlns="http://www.w3.org/2000/svg">
-	<defs>
-		<style type="text/css">
-			/* Define the fonts directly */
-			@font-face {
-				font-family: 'Roboto';
-				src: url('https://fonts.googleapis.com/css?family=Roboto');
-			}
+<svg width="16rem" height="5rem" viewBox="0 0 16rem 5rem" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style type="text/css">
+            :root {
+                /* Colors */
+                --secondary-text-color: #0f2649;
+                --accent-color: #c41230;
+                --primary-text-color: mix(var(--secondary-text-color), var(--accent-color), 50%);
 
-			/* Use the fonts in your SVG */
-			.roboto {
-				font-family: 'Roboto', sans-serif;
-			}
+                /* Dimensions */
+                --font-size: 2.0rem;
+                --font-size-small: 0.8rem;
 
-		</style>
-	</defs>
-	<rect width="180"
-		  height="100"
-		  fill="transparent" />
-	<text x="10"
-		  y="30"
-		  class="roboto"
-		  font-size="20"
-		  fill="rgb(15, 38, 73)"
-		  text-anchor="start"
-		  alignment-baseline="middle">grosvenor</text>
-	<text x="10"
-		  y="50"
-		  class="roboto"
-		  font-size="20"
-		  fill="#c41230"
-		  text-anchor="start"
-		  alignment-baseline="middle">international</text>
-	<text x="10"
-		  y="70"
-		  class="roboto"
-		  font-size="20"
-		  fill="rgb(15, 38, 73)"
-		  text-anchor="start"
-		  alignment-baseline="middle">partners</text>
-	<text x="90"
-		  y="72"
-		  class="roboto"
-		  font-size="10"
-		  fill="rgb(15, 38, 73)"
-		  text-anchor="start"
-		  alignment-baseline="middle">Executive Search</text>
+                --text-position-x-title: 0.5rem;
+                --text-position-x-sub-title: 8.2rem;
+
+                --text-position-y-title-g: 1.0rem;
+                --text-position-y-title-i: 2.5rem;
+                --text-position-y-title-p: 4.0rem;
+                --text-position-y-sub-title: 4.0rem;
+            }
+
+            /* Define the fonts directly */
+            @font-face {
+                font-family: 'Roboto';
+                src: url('https://fonts.googleapis.com/css?family=Roboto');
+            }
+
+            /* Use the fonts in your SVG */
+            .roboto {
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .text-title,
+            .text-title-secondary,
+            .text-sub-title {
+                font-size: var(--font-size);
+                text-anchor: start;
+                alignment-baseline: middle;
+            }
+
+            .text-title {
+                fill: var(--secondary-text-color);
+            }
+
+            .text-title-secondary {
+                fill: var(--accent-color);
+            }
+
+            .text-sub-title {
+                font-size: var(--font-size-small);
+                fill: var(--primary-text-color);
+            }
+        </style>
+    </defs>
+    <rect width="16rem" height="5rem" fill="transparent" />
+    <text x="var(--text-position-x-title)" y="var(--text-position-y-title-g)" class="text-title roboto">grosvenor</text>
+    <text x="var(--text-position-x-title)" y="3rem" class="text-title-secondary roboto">international</text>
+    <text x="var(--text-position-x-title)" y="4.1rem" class="text-title roboto">partners</text>
+    <text x="8.2rem" y="4.5rem" class="text-sub-title roboto">Executive Search</text>
 </svg>
