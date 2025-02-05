@@ -54,6 +54,10 @@ h3 {
 	color: var(--accent-color);
 }
 
+strong {
+	color: var(--secondary-text-color);
+}
+
 li strong {
 	color: var(--accent-color);
 }
