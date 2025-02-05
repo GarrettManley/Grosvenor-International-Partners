@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto|Droid+Serif|Inconsolata);
 
+/* Root Variables */
 :root {
 	/* Colors */
 	--secondary-text-color: #0f2649;
@@ -31,6 +32,13 @@
 	--footer-position: static;
 }
 
+/* Typography */
+body {
+	font-family: "Roboto", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
 h1 {
 	font-size: 2.5rem;
 	color: var(--secondary-text-color);
@@ -46,22 +54,11 @@ h3 {
 	color: var(--accent-color);
 }
 
-hr {
-	background-image: linear-gradient(to right, transparent, var(--hr-color), transparent);
-	margin-top: 1.5rem;
-	margin-bottom: 1.5rem;
-}
-
 li strong {
 	color: var(--accent-color);
 }
 
-body {
-	font-family: "Roboto", sans-serif;
-	margin: 0;
-	padding: 0;
-}
-
+/* Headers */
 header {
 	background-color: var(--primary-text-color);
 	color: white;
@@ -70,21 +67,18 @@ header {
 	align-items: center;
 }
 
-#logo {
-	height: var(--logo-height);
-	margin-right: var(--header-padding);
-}
-
-.no-padding-left {
-	padding-left: 0 !important;
-}
-
 header h1 {
 	margin: 0;
 	font-size: 1.5rem;
 	flex-grow: 1;
 }
 
+#logo {
+	height: var(--logo-height);
+	margin-right: var(--header-padding);
+}
+
+/* Navigation */
 nav {
 	border: none;
 	background-color: var(--background-color);
@@ -121,31 +115,19 @@ nav ul li img {
 	height: 5rem;
 }
 
+/* Hero Section */
 #hero {
 	background-color: var(--hero-bg-color);
 	padding: var(--hero-padding);
 	text-align: center;
 }
 
+/* Sections */
 section {
 	padding: var(--section-padding);
 	min-height: var(--section-min-height);
 	border-top: 1px solid var(--accent-color);
 	border-bottom: 1px solid var(--accent-color);
-}
-
-@media (max-width: 768px) {
-
-	h1,
-	h2 {
-		text-align: center;
-	}
-}
-
-@media (max-width: 576px) {
-	.section {
-		min-height: 0;
-	}
 }
 
 .section#exec {
@@ -170,20 +152,6 @@ section {
 	padding: var(--memo-padding);
 }
 
-@media (min-width: 576px) {
-	.section .memo {
-		box-shadow: 0 3px 6px var(--hr-color), 0 3px 6px var(--hr-color);
-		margin-top: var(--memo-margin-top-bottom);
-		margin-bottom: var(--memo-margin-top-bottom);
-	}
-}
-
-@media (min-width: 768px) {
-	.section .memo {
-		padding: var(--memo-padding-large);
-	}
-}
-
 .section a {
 	color: var(--link-color);
 }
@@ -198,6 +166,7 @@ section {
 	height: 2px;
 }
 
+/* Footer */
 footer {
 	background-color: var(--footer-bg-color);
 	color: white;
@@ -206,4 +175,43 @@ footer {
 	position: var(--footer-position);
 	width: 100%;
 	bottom: 0;
+}
+
+/* Horizontal Rule */
+hr {
+	background-image: linear-gradient(to right, transparent, var(--hr-color), transparent);
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+/* Utility Classes */
+.no-padding-left {
+	padding-left: 0 !important;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+	h1, h2 {
+		text-align: center;
+	}
+}
+
+@media (max-width: 576px) {
+	.section {
+		min-height: 0;
+	}
+}
+
+@media (min-width: 576px) {
+	.section .memo {
+		box-shadow: 0 3px 6px var(--hr-color), 0 3px 6px var(--hr-color);
+		margin-top: var(--memo-margin-top-bottom);
+		margin-bottom: var(--memo-margin-top-bottom);
+	}
+}
+
+@media (min-width: 768px) {
+	.section .memo {
+		padding: var(--memo-padding-large);
+	}
 }
